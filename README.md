@@ -13,15 +13,15 @@
 ## Assignment 1: Make a Cultist Model
 1. import the data from the dataset, and store it in a pandas variable ***cult***
 2. Divide the data into two datasets, ***cultists*** and ***roles***. Make the X dataset for the stats(*features*) of the cultists, and the Y dataset for the position(*targets*) for the dataset.
-3. Refactor the dataset X, by removing the irrelevent features from in the dataset, so it only contains charactistic statistics
+3. Refactor the dataset ***cultists***, by removing the irrelevent features from in the dataset, so it only contains charactistic statistics
 ```python
 ['stealth', 'Influence', 'Endurance', 'Lore', 'Economic', 'Strength', 'Insanity']
 ```
-4. Refactor the dataset Y so each value become machine friendly numbers, instead of strings.
+4. Refactor the dataset ***roles*** so each value become machine friendly numbers, instead of strings.
 5. Use LinearRegression to make a model object.
-6. Use train_test_split from model_selection, to make training and testing dataset from X and Y
-   1. Try ajusting the test_size variable later, to see what gives the better scores.
-7. Feed the model the training datasets, and score the model on the training dataset (*model.score*)
+6. Use train_test_split from model_selection, to make training and testing dataset from ***cultists*** and ***roles***
+   1. Try atjusting the test_size variable later, to see what gives the better scores.
+7. Feed the model with the training datasets, and score the model on the training dataset (*model.score*)
 8. Score the model on the testing datasets, and compare to the testing scores.
 
 <img src="http://www.artofmtg.com/wp-content/uploads/2016/03/Cryptolith-Rite-Shadows-over-Innistrad-Art.jpg" alt="Cult Symbol" height="350">
@@ -29,9 +29,9 @@
 ## Assignment 2: Classification of Cultists
 *Since the cultist data doesn't seem to have any linear progression, another model might give better result in sorting members...*
 1. Use DecisionTreeClassifier to make a new model object
-2. Use train_test_split from model_selection, to make training and testing dataset from X and Y
-   1. Try ajusting the test_size variable later, to see what gives the better scores.
-3. Feed the model the training datasets, and score the model on the training dataset (*accuracy _score from sklearn.metrics*)
+2. Use train_test_split from model_selection, to make training and testing dataset from ***cultists*** and ***roles***
+   1. Try atjusting the test_size variable later, to see what gives the better scores.
+3. Feed the model with the training datasets, and score the model on the training dataset (*accuracy _score from sklearn.metrics*)
 4. Score the model on the testing datasets, and compare to the testing scores.
 5. Compare the scores from using Classification and using Regression models.
 *We suspect the score difference is the result of the datasets structure not progressing in a linear fashion*
