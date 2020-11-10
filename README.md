@@ -24,7 +24,7 @@
 7. Feed the model the training datasets, and score the model on the training dataset (*model.score*)
 8. Score the model on the testing datasets, and compare to the testing scores.
 
-<img src="http://www.artofmtg.com/wp-content/uploads/2016/03/Cryptolith-Rite-Shadows-over-Innistrad-Art.jpg" alt="Cult Symbol" width="500">
+<img src="http://www.artofmtg.com/wp-content/uploads/2016/03/Cryptolith-Rite-Shadows-over-Innistrad-Art.jpg" alt="Cult Symbol" height="350">
 
 ## Assignment 2: Classification of Cultists
 *Since the cultist data doesn't seem to have any linear progression, another model might give better result in sorting members...*
@@ -36,7 +36,7 @@
 5. Compare the scores from using Classification and using Regression models.
 *We suspect the score difference is the result of the datasets structure not progressing in a linear fashion*
 
-<img src="https://i.pinimg.com/564x/02/d8/0a/02d80a719a04e81362bfd0e717cafdb4.jpg" alt="Cult Symbol" width="500">
+<img src="https://i.pinimg.com/564x/02/d8/0a/02d80a719a04e81362bfd0e717cafdb4.jpg" alt="Cult Symbol" height="350">
 
 ## Assignment 3: Find Clusters of Cultists
 1. Use the orignal dataset again, and remove the charactistic statistics used earlier, as well as the name and position for each member.
@@ -52,7 +52,7 @@
    2. Which cluster has the highest amount of recruits
    3. What seems to be the defining feature(s) for each cluster
 
-<img src="https://i.pinimg.com/originals/64/bd/b9/64bdb9f8fea6e1460e816b4bf4cdec8c.jpg" alt="Cult Symbol" width="500">
+<img src="https://i.pinimg.com/originals/64/bd/b9/64bdb9f8fea6e1460e816b4bf4cdec8c.jpg" alt="Cult Symbol" height="350">
 _______________________
 
 Vi benytter datasættene: [Cultists](https://raw.githubusercontent.com/Micniks/Python-Week11-Group-3-Assignments/main/cultists.csv)
