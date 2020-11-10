@@ -40,14 +40,13 @@
 
 ## Assignment 3: Find Clusters of Cultists
 1. Use the orignal dataset again, and remove the charactistic statistics used earlier, as well as the name and position for each member.
-2. Change the Gender feature into a numeric value, using a LabelEncoder
-3. Change the Living_Area feature into multiple numeric features, using One Hot Encoding
-4. Remove all rows with missing data for any features
-5. Make a model/analyzer from sklearn.cluster, with the appropriate bandwidth for the data.
-6. Use the analyzer to process the data, grouping people into clusters.
-7. Make a dataset from the cluster-array, showing the avarage statistic values for features in each cluster
-8. Add a count feature to each cluster, showing how many members are in each cluster
-9. Look at the final data, and answer the following questions:
+2. Change the Living_Area feature into multiple numeric features, using One Hot Encoding
+3. Remove all rows with missing data for any features
+4. Make a model/analyzer from sklearn.cluster, with the appropriate bandwidth for the data.
+5. Use the analyzer to process the data, grouping people into clusters.
+6. Make a dataset from the cluster-array, showing the avarage statistic values for features in each cluster
+7. Add a count feature to each cluster, showing how many members are in each cluster
+8. Look at the final data, and answer the following questions:
    1. How many clusters are there
    2. Which cluster has the highest amount of recruits
    3. What seems to be the defining feature(s) for each cluster
