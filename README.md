@@ -12,44 +12,47 @@
 
 ## Assignment 1: Make a Cultist Model
 1. import the data from the dataset, and store it in a pandas variable ***cult***
-2. Divide the data into two datasets, ***cultists*** and ***roles***. Make the X dataset for the stats(*features*) of the cultists, and the Y dataset for the position(*targets*) for the dataset.
-3. Refactor the dataset ***cultists***, by removing the irrelevent features from in the dataset, so it only contains charactistic statistics
+2. Divide the data into two datasets, ***cultists*** and ***roles***. Make the X dataset for the stats(*features*) of the cultists, by removing the irrelevant data, so you have columns as below, and the Y dataset for the position(*targets*) for the dataset.
 ```python
-['stealth', 'Influence', 'Endurance', 'Lore', 'Economic', 'Strength', 'Insanity']
+['Stealth', 'Influence', 'Endurance', 'Lore', 'Economic', 'Strength', 'Insanity']
 ```
-4. Refactor the dataset ***roles*** so each value become machine friendly numbers, instead of strings.
-5. Use LinearRegression to make a model object.
-6. Use train_test_split from model_selection, to make training and testing dataset from ***cultists*** and ***roles***
+3. Refactor the dataset ***roles*** so each value become machine friendly numbers, instead of strings.
+4. Use LinearRegression to make a model object.
+5. Use train_test_split from model_selection, to make training and testing dataset from ***cultists*** and ***roles***
    1. Try adjusting the test_size variable later, to see what gives the better scores.
-7. Feed the model with the training datasets, and score the model on the training dataset (*model.score*)
-8. Score the model on the testing datasets, and compare to the testing scores.
+6. Feed the model with the training datasets, and score the model on the training dataset (*model.score*)
+7. Score the model on the testing datasets, and compare to the testing scores.
 
 <img src="http://www.artofmtg.com/wp-content/uploads/2016/03/Cryptolith-Rite-Shadows-over-Innistrad-Art.jpg" alt="Cult Symbol" height="350">
 
 ## Assignment 2: Classification of Cultists
 *Since the cultist data doesn't seem to have any linear progression, another model might give better result in sorting members...*
 1. Use DecisionTreeClassifier to make a new model object
-2. Use train_test_split from model_selection, to make training and testing dataset from ***cultists*** and ***roles***
+2. Use train_test_split from model_selection again, to make training and testing dataset from ***cultists*** and ***roles***
    1. Try adjusting the test_size variable later, to see what gives the better scores.
 3. Feed the model with the training datasets, and score the model on the training dataset (*accuracy _score from sklearn.metrics*)
 4. Score the model on the testing datasets, and compare to the testing scores.
 5. Compare the scores from using Classification and using Regression models.
-*We suspect the score difference is the result of the datasets structure not progressing in a linear fashion*
+*The Score difference is the result of the datasets structure not progressing in a linear fashion, and as such, it is not ideal to use regression for prediction in this dataset.*
 
 <img src="https://i.pinimg.com/564x/02/d8/0a/02d80a719a04e81362bfd0e717cafdb4.jpg" alt="Cult Symbol" height="350">
 
 ## Assignment 3: Find Clusters of Cultists
 1. Use the orignal dataset again, and remove the charactistic statistics used earlier, as well as the name and position for each member.
-2. Change the Living_Area feature into multiple numeric features, using One Hot Encoding
-3. Remove all rows with missing data for any features
+2. Remove all rows with missing data for any features
+3. Change the Living_Area feature into multiple numeric features, using One Hot Encoding
 4. Make a model/analyzer from sklearn.cluster, with the appropriate bandwidth for the data.
-5. Use the analyzer to process the data, grouping people into clusters.
-6. Make a dataset from the cluster-array, showing the avarage statistic values for features in each cluster
-7. Add a count feature to each cluster, showing how many members are in each cluster
-8. Look at the final data, and answer the following questions:
-   1. How many clusters are there
-   2. Which cluster has the highest amount of recruits
-   3. What seems to be the defining feature(s) for each cluster
+   1. **Because the running time for fitting the data is depended on the size of the bandwidth, start out with a max_value of 50 or 100, and increase it in increments, until you think it takes to long to run.**
+   2. The higher the bandwidth gets, the longer it takes to run, but you also get fewer clusters in spread.
+5. Fit the data into the analyzer
+6. Get labels from *analyzer.labels_*, to get the cluster number for each values, and *np.unique* to see how many clusters you have gotten. 
+7. Set cluster label into the data for each cultist
+8. Make a new dataset, where you group from the people from each cluster together.
+9. Adda count feature to each cluster-group, showing how many members are in each cluster
+10. Make the dataset from the cluster-array, showing the avarage statistic values for features in each cluster
+
+*The inspiration for this 3rd assignment is from the titanic assignment shown in the material under 11-2*
+
 
 <img src="https://i.pinimg.com/originals/64/bd/b9/64bdb9f8fea6e1460e816b4bf4cdec8c.jpg" alt="Cult Symbol" height="350">
 _______________________
