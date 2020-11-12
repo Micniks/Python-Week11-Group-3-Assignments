@@ -27,12 +27,14 @@
 
 ## Assignment 2: Classification of Cultists
 *Since the cultist data doesn't seem to have any linear progression, another model might give better result in sorting members...*
+
 1. Use DecisionTreeClassifier to make a new model object
 2. Use train_test_split from model_selection again, to make training and testing dataset from ***cultists*** and ***roles***
    1. Try adjusting the test_size variable later, to see what gives the better scores.
 3. Feed the model with the training datasets, and score the model on the training dataset (*accuracy _score from sklearn.metrics*)
 4. Score the model on the testing datasets, and compare to the testing scores.
 5. Compare the scores from using Classification and using Regression models.
+
 *The Score difference is the result of the datasets structure not progressing in a linear fashion, and as such, it is not ideal to use regression for prediction in this dataset.*
 
 <img src="https://i.pinimg.com/564x/02/d8/0a/02d80a719a04e81362bfd0e717cafdb4.jpg" alt="Cult Symbol" height="350">
